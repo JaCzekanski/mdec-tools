@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cstring>
 #include <vector>
 #include <stb_image.h>
 #include "types.h"

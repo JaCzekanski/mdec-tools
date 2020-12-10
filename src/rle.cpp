@@ -1,4 +1,5 @@
 #include "rle.h"
+#include <cmath>
 
 // First byte in block
 union DCT {

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(mdec_tools)
+project(mdec-tools)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -10,7 +10,7 @@ add_library(stb_image STATIC
 target_include_directories(stb_image PUBLIC externals/stb)
 
 
-add_executable(mdec_tools
+add_executable(mdec-tools
         src/main.cpp
         src/types.cpp
         src/rle.cpp
@@ -18,9 +18,9 @@ add_executable(mdec_tools
         src/quant_tables.cpp
         )
 
-target_include_directories(mdec_tools
+target_include_directories(mdec-tools
         PUBLIC
         src
         )
-target_link_libraries(mdec_tools
+target_link_libraries(mdec-tools
         stb_image)

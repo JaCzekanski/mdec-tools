@@ -1,0 +1,21 @@
+name: Build
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure CMake
+        run: cmake -B build/ -S . -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: mdec-tools
+          path: build/mdec-tools

@@ -1,5 +1,6 @@
 #include "quantize.h"
 #include "zigzag.h"
+#include <cmath>
 
 block_t quantize(const block_t &in, const quant_table_t &quantTable) {
     block_t out;
