@@ -1,5 +1,6 @@
 #pragma once
-#include <vector>
+#include "bitstream.h"
 #include "types.h"
 
-std::vector<uint16_t> noRleBitstream(const block_t &block);
+bitstream_t noRleBitstream(const block_t &block);
+bitstream_t rleBitstream(const block_t &block);

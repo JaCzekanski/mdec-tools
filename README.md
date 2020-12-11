@@ -8,11 +8,11 @@ Implemented so far:
 - Float DCT
 - Quantization
 - Non-RLE bitstream generation
+- RLE
 - Mono output
+- Color support (Cr/Cb blocks with 4:2:0 chroma subsampling)
 
 To be implemented:
-- Color support (Cr/Cb blocks with 4:2:0 chroma subsampling)
-- RLE
 - Different quantization tables 
 - Integer implementation to match PSX
 

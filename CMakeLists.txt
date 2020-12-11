@@ -12,10 +12,11 @@ target_include_directories(stb_image PUBLIC externals/stb)
 
 add_executable(mdec-tools
         src/main.cpp
-        src/types.cpp
+        src/encode.cpp
         src/rle.cpp
         src/quantize.cpp
         src/quant_tables.cpp
+        src/subsample.cpp
         )
 
 target_include_directories(mdec-tools
