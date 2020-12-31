@@ -33,8 +33,9 @@ uint16_t toInt(double in) {
     return (uint16_t) (int16_t) round(in);
 }
 
+extern int qFactor;
+
 bitstream_t noRleBitstream(const block_t &block) {
-    int qFactor = 1;
     bitstream_t out;
     DCT dct;
     dct.dc = toInt(block[0]);
@@ -52,7 +53,6 @@ bitstream_t noRleBitstream(const block_t &block) {
 }
 
 bitstream_t rleBitstream(const block_t &block) {
-    int qFactor = 1;
     bitstream_t out;
     DCT dct;
     dct.dc = toInt(block[0]);
@@ -82,7 +82,6 @@ bitstream_t rleBitstream(const block_t &block) {
     if (zeroesToSkip != 0) {
         // TODO: Not sure which padding method should be used
 //        out.push_back(0xfe00);
-        printf("Writing %d zeroes\n", zeroesToSkip);
         zeroesToSkip -= 1;
         writeZeroes();
     }
